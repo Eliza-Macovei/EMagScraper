@@ -98,6 +98,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate{
                                           style: .default,
                                           handler: nil
             ))
+            
             self.present(alert, animated: true, completion: nil)
         } else {
             //if any: set in context, segue to the Master.
