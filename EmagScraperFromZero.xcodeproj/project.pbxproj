@@ -1,0 +1,683 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E963D333E2F5C7A33D3FE6F /* Pods_EmagScraperFromZero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB853D9232353AB68F18E1C /* Pods_EmagScraperFromZero.framework */; };
+		6094D44C20A983FC000F76E1 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6094D44B20A983FC000F76E1 /* ImageCache.swift */; };
+		60C279CA20A4969400765EF3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C279C920A4969400765EF3 /* ImageViewController.swift */; };
+		60C279CC20A496CD00765EF3 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C279CB20A496CD00765EF3 /* PageViewController.swift */; };
+		C79830FFF9990C02A8EEBAF2 /* Pods_EmagScraperFromZeroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCDA12B472799DC82423D33 /* Pods_EmagScraperFromZeroTests.framework */; };
+		C95CA7A720A04FD600500CF0 /* UIImage+getFromUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95CA7A620A04FD600500CF0 /* UIImage+getFromUrl.swift */; };
+		C95CA7AA20A1B3AB00500CF0 /* EMagDetailsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95CA7A920A1B3AB00500CF0 /* EMagDetailsParser.swift */; };
+		C95CA7AD20A1C3B800500CF0 /* Element+EmagReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95CA7AC20A1C3B800500CF0 /* Element+EmagReader.swift */; };
+		C95CA7AF20A1CD1A00500CF0 /* Url+getHtml.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95CA7AE20A1CD1A00500CF0 /* Url+getHtml.swift */; };
+		C96C85FF20A003BC00A3C5A6 /* EMagItemParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96C85FE20A003BC00A3C5A6 /* EMagItemParser.swift */; };
+		C9D136BC209AEF4E00BFEC51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136BB209AEF4E00BFEC51 /* AppDelegate.swift */; };
+		C9D136BE209AEF4E00BFEC51 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136BD209AEF4E00BFEC51 /* SearchViewController.swift */; };
+		C9D136C1209AEF4E00BFEC51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D136BF209AEF4E00BFEC51 /* Main.storyboard */; };
+		C9D136C4209AEF4E00BFEC51 /* EmagScraperFromZero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9D136C2209AEF4E00BFEC51 /* EmagScraperFromZero.xcdatamodeld */; };
+		C9D136C6209AEF4F00BFEC51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D136C5209AEF4F00BFEC51 /* Assets.xcassets */; };
+		C9D136C9209AEF4F00BFEC51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D136C7209AEF4F00BFEC51 /* LaunchScreen.storyboard */; };
+		C9D136D4209AEF4F00BFEC51 /* EmagScraperFromZeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136D3209AEF4F00BFEC51 /* EmagScraperFromZeroTests.swift */; };
+		C9D136E3209AF1A500BFEC51 /* DetailsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136E1209AF1A500BFEC51 /* DetailsItem.swift */; };
+		C9D136E4209AF1A500BFEC51 /* PreviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136E2209AF1A500BFEC51 /* PreviewItem.swift */; };
+		C9D136E7209AF1B400BFEC51 /* EmagScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136E5209AF1B400BFEC51 /* EmagScraper.swift */; };
+		C9D136E8209AF1B400BFEC51 /* ScreenScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136E6209AF1B400BFEC51 /* ScreenScraper.swift */; };
+		C9D136ED209C502800BFEC51 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136EC209C502800BFEC51 /* ItemTableViewCell.swift */; };
+		C9D136EF209C505100BFEC51 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136EE209C505100BFEC51 /* ItemTableViewController.swift */; };
+		C9D136F1209C89C900BFEC51 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136F0209C89C900BFEC51 /* DetailsViewController.swift */; };
+		C9D136F3209DBD8300BFEC51 /* Extension+Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136F2209DBD8300BFEC51 /* Extension+Nav.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9D136D0209AEF4F00BFEC51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9D136B0209AEF4E00BFEC51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9D136B7209AEF4E00BFEC51;
+			remoteInfo = EmagScraperFromZero;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D4799AA2F96A4AFFE074138 /* Pods-EmagScraperFromZero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmagScraperFromZero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmagScraperFromZero/Pods-EmagScraperFromZero.debug.xcconfig"; sourceTree = "<group>"; };
+		433F3ED8A72B8B76ADCBA989 /* Pods-EmagScraperFromZero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmagScraperFromZero.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmagScraperFromZero/Pods-EmagScraperFromZero.release.xcconfig"; sourceTree = "<group>"; };
+		58834EAC54540C5BF0EB2A66 /* Pods-EmagScraperFromZeroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmagScraperFromZeroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmagScraperFromZeroTests/Pods-EmagScraperFromZeroTests.release.xcconfig"; sourceTree = "<group>"; };
+		6094D44B20A983FC000F76E1 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		60C279C920A4969400765EF3 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		60C279CB20A496CD00765EF3 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		9FCDA12B472799DC82423D33 /* Pods_EmagScraperFromZeroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmagScraperFromZeroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD80575796B0EE8FE8D091BB /* Pods-EmagScraperFromZeroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmagScraperFromZeroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmagScraperFromZeroTests/Pods-EmagScraperFromZeroTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C95CA7A620A04FD600500CF0 /* UIImage+getFromUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+getFromUrl.swift"; sourceTree = "<group>"; };
+		C95CA7A920A1B3AB00500CF0 /* EMagDetailsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMagDetailsParser.swift; sourceTree = "<group>"; };
+		C95CA7AC20A1C3B800500CF0 /* Element+EmagReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Element+EmagReader.swift"; sourceTree = "<group>"; };
+		C95CA7AE20A1CD1A00500CF0 /* Url+getHtml.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Url+getHtml.swift"; sourceTree = "<group>"; };
+		C96C85FE20A003BC00A3C5A6 /* EMagItemParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMagItemParser.swift; sourceTree = "<group>"; };
+		C9D136B8209AEF4E00BFEC51 /* EmagScraperFromZero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmagScraperFromZero.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D136BB209AEF4E00BFEC51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9D136BD209AEF4E00BFEC51 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C9D136C0209AEF4E00BFEC51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9D136C3209AEF4E00BFEC51 /* EmagScraperFromZero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmagScraperFromZero.xcdatamodel; sourceTree = "<group>"; };
+		C9D136C5209AEF4F00BFEC51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9D136C8209AEF4F00BFEC51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9D136CA209AEF4F00BFEC51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9D136CF209AEF4F00BFEC51 /* EmagScraperFromZeroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmagScraperFromZeroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D136D3209AEF4F00BFEC51 /* EmagScraperFromZeroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmagScraperFromZeroTests.swift; sourceTree = "<group>"; };
+		C9D136D5209AEF4F00BFEC51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9D136E1209AF1A500BFEC51 /* DetailsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsItem.swift; sourceTree = "<group>"; };
+		C9D136E2209AF1A500BFEC51 /* PreviewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewItem.swift; sourceTree = "<group>"; };
+		C9D136E5209AF1B400BFEC51 /* EmagScraper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmagScraper.swift; sourceTree = "<group>"; };
+		C9D136E6209AF1B400BFEC51 /* ScreenScraper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenScraper.swift; sourceTree = "<group>"; };
+		C9D136EC209C502800BFEC51 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		C9D136EE209C505100BFEC51 /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
+		C9D136F0209C89C900BFEC51 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		C9D136F2209DBD8300BFEC51 /* Extension+Nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Nav.swift"; sourceTree = "<group>"; };
+		DEB853D9232353AB68F18E1C /* Pods_EmagScraperFromZero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmagScraperFromZero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9D136B5209AEF4E00BFEC51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E963D333E2F5C7A33D3FE6F /* Pods_EmagScraperFromZero.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D136CC209AEF4F00BFEC51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C79830FFF9990C02A8EEBAF2 /* Pods_EmagScraperFromZeroTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1010240A937131D7F94AA941 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D4799AA2F96A4AFFE074138 /* Pods-EmagScraperFromZero.debug.xcconfig */,
+				433F3ED8A72B8B76ADCBA989 /* Pods-EmagScraperFromZero.release.xcconfig */,
+				AD80575796B0EE8FE8D091BB /* Pods-EmagScraperFromZeroTests.debug.xcconfig */,
+				58834EAC54540C5BF0EB2A66 /* Pods-EmagScraperFromZeroTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		44A5DAD116DAB98BF026CFBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEB853D9232353AB68F18E1C /* Pods_EmagScraperFromZero.framework */,
+				9FCDA12B472799DC82423D33 /* Pods_EmagScraperFromZeroTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C95CA7AB20A1BFD900500CF0 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				C9D136E6209AF1B400BFEC51 /* ScreenScraper.swift */,
+				C95CA7AE20A1CD1A00500CF0 /* Url+getHtml.swift */,
+				C95CA7A620A04FD600500CF0 /* UIImage+getFromUrl.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		C9D136AF209AEF4E00BFEC51 = {
+			isa = PBXGroup;
+			children = (
+				C9D136BA209AEF4E00BFEC51 /* EmagScraperFromZero */,
+				C9D136D2209AEF4F00BFEC51 /* EmagScraperFromZeroTests */,
+				C9D136B9209AEF4E00BFEC51 /* Products */,
+				1010240A937131D7F94AA941 /* Pods */,
+				44A5DAD116DAB98BF026CFBC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C9D136B9209AEF4E00BFEC51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9D136B8209AEF4E00BFEC51 /* EmagScraperFromZero.app */,
+				C9D136CF209AEF4F00BFEC51 /* EmagScraperFromZeroTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9D136BA209AEF4E00BFEC51 /* EmagScraperFromZero */ = {
+			isa = PBXGroup;
+			children = (
+				C9D136BF209AEF4E00BFEC51 /* Main.storyboard */,
+				C95CA7AB20A1BFD900500CF0 /* General */,
+				C9D136DF209AF18100BFEC51 /* EmagScraper */,
+				C9D136E0209AF18700BFEC51 /* Models */,
+				C9D136E9209AF1C200BFEC51 /* Controllers */,
+				C9D136DE209AEF6600BFEC51 /* AppScaffolding */,
+			);
+			path = EmagScraperFromZero;
+			sourceTree = "<group>";
+		};
+		C9D136D2209AEF4F00BFEC51 /* EmagScraperFromZeroTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9D136D3209AEF4F00BFEC51 /* EmagScraperFromZeroTests.swift */,
+				C9D136D5209AEF4F00BFEC51 /* Info.plist */,
+			);
+			path = EmagScraperFromZeroTests;
+			sourceTree = "<group>";
+		};
+		C9D136DE209AEF6600BFEC51 /* AppScaffolding */ = {
+			isa = PBXGroup;
+			children = (
+				C9D136BB209AEF4E00BFEC51 /* AppDelegate.swift */,
+				C9D136C5209AEF4F00BFEC51 /* Assets.xcassets */,
+				C9D136C7209AEF4F00BFEC51 /* LaunchScreen.storyboard */,
+				C9D136CA209AEF4F00BFEC51 /* Info.plist */,
+				C9D136C2209AEF4E00BFEC51 /* EmagScraperFromZero.xcdatamodeld */,
+			);
+			path = AppScaffolding;
+			sourceTree = "<group>";
+		};
+		C9D136DF209AF18100BFEC51 /* EmagScraper */ = {
+			isa = PBXGroup;
+			children = (
+				C9D136E5209AF1B400BFEC51 /* EmagScraper.swift */,
+				C96C85FE20A003BC00A3C5A6 /* EMagItemParser.swift */,
+				C95CA7A920A1B3AB00500CF0 /* EMagDetailsParser.swift */,
+				C95CA7AC20A1C3B800500CF0 /* Element+EmagReader.swift */,
+			);
+			path = EmagScraper;
+			sourceTree = "<group>";
+		};
+		C9D136E0209AF18700BFEC51 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9D136E2209AF1A500BFEC51 /* PreviewItem.swift */,
+				C9D136E1209AF1A500BFEC51 /* DetailsItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C9D136E9209AF1C200BFEC51 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9D136BD209AEF4E00BFEC51 /* SearchViewController.swift */,
+				C9D136EE209C505100BFEC51 /* ItemTableViewController.swift */,
+				C9D136EC209C502800BFEC51 /* ItemTableViewCell.swift */,
+				C9D136F0209C89C900BFEC51 /* DetailsViewController.swift */,
+				60C279CB20A496CD00765EF3 /* PageViewController.swift */,
+				60C279C920A4969400765EF3 /* ImageViewController.swift */,
+				6094D44B20A983FC000F76E1 /* ImageCache.swift */,
+				C9D136F2209DBD8300BFEC51 /* Extension+Nav.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9D136B7209AEF4E00BFEC51 /* EmagScraperFromZero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9D136D8209AEF4F00BFEC51 /* Build configuration list for PBXNativeTarget "EmagScraperFromZero" */;
+			buildPhases = (
+				30C140A4A3E6A83F43DA2612 /* [CP] Check Pods Manifest.lock */,
+				C9D136B4209AEF4E00BFEC51 /* Sources */,
+				C9D136B5209AEF4E00BFEC51 /* Frameworks */,
+				C9D136B6209AEF4E00BFEC51 /* Resources */,
+				6D355DD50FA47252830758CC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmagScraperFromZero;
+			productName = EmagScraperFromZero;
+			productReference = C9D136B8209AEF4E00BFEC51 /* EmagScraperFromZero.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9D136CE209AEF4F00BFEC51 /* EmagScraperFromZeroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9D136DB209AEF4F00BFEC51 /* Build configuration list for PBXNativeTarget "EmagScraperFromZeroTests" */;
+			buildPhases = (
+				03293CFDFC4DBE3F9D6A3191 /* [CP] Check Pods Manifest.lock */,
+				C9D136CB209AEF4F00BFEC51 /* Sources */,
+				C9D136CC209AEF4F00BFEC51 /* Frameworks */,
+				C9D136CD209AEF4F00BFEC51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9D136D1209AEF4F00BFEC51 /* PBXTargetDependency */,
+			);
+			name = EmagScraperFromZeroTests;
+			productName = EmagScraperFromZeroTests;
+			productReference = C9D136CF209AEF4F00BFEC51 /* EmagScraperFromZeroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9D136B0209AEF4E00BFEC51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Elizabeta Macovei";
+				TargetAttributes = {
+					C9D136B7209AEF4E00BFEC51 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					C9D136CE209AEF4F00BFEC51 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = C9D136B7209AEF4E00BFEC51;
+					};
+				};
+			};
+			buildConfigurationList = C9D136B3209AEF4E00BFEC51 /* Build configuration list for PBXProject "EmagScraperFromZero" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9D136AF209AEF4E00BFEC51;
+			productRefGroup = C9D136B9209AEF4E00BFEC51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9D136B7209AEF4E00BFEC51 /* EmagScraperFromZero */,
+				C9D136CE209AEF4F00BFEC51 /* EmagScraperFromZeroTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9D136B6209AEF4E00BFEC51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D136C9209AEF4F00BFEC51 /* LaunchScreen.storyboard in Resources */,
+				C9D136C6209AEF4F00BFEC51 /* Assets.xcassets in Resources */,
+				C9D136C1209AEF4E00BFEC51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D136CD209AEF4F00BFEC51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03293CFDFC4DBE3F9D6A3191 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmagScraperFromZeroTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30C140A4A3E6A83F43DA2612 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmagScraperFromZero-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D355DD50FA47252830758CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EmagScraperFromZero/Pods-EmagScraperFromZero-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmagScraperFromZero/Pods-EmagScraperFromZero-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9D136B4209AEF4E00BFEC51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D136BE209AEF4E00BFEC51 /* SearchViewController.swift in Sources */,
+				C95CA7AF20A1CD1A00500CF0 /* Url+getHtml.swift in Sources */,
+				C9D136EF209C505100BFEC51 /* ItemTableViewController.swift in Sources */,
+				60C279CA20A4969400765EF3 /* ImageViewController.swift in Sources */,
+				C9D136E4209AF1A500BFEC51 /* PreviewItem.swift in Sources */,
+				C9D136F3209DBD8300BFEC51 /* Extension+Nav.swift in Sources */,
+				C9D136E7209AF1B400BFEC51 /* EmagScraper.swift in Sources */,
+				C95CA7AD20A1C3B800500CF0 /* Element+EmagReader.swift in Sources */,
+				C96C85FF20A003BC00A3C5A6 /* EMagItemParser.swift in Sources */,
+				6094D44C20A983FC000F76E1 /* ImageCache.swift in Sources */,
+				C9D136E8209AF1B400BFEC51 /* ScreenScraper.swift in Sources */,
+				C9D136ED209C502800BFEC51 /* ItemTableViewCell.swift in Sources */,
+				C95CA7AA20A1B3AB00500CF0 /* EMagDetailsParser.swift in Sources */,
+				C9D136E3209AF1A500BFEC51 /* DetailsItem.swift in Sources */,
+				C95CA7A720A04FD600500CF0 /* UIImage+getFromUrl.swift in Sources */,
+				C9D136BC209AEF4E00BFEC51 /* AppDelegate.swift in Sources */,
+				60C279CC20A496CD00765EF3 /* PageViewController.swift in Sources */,
+				C9D136C4209AEF4E00BFEC51 /* EmagScraperFromZero.xcdatamodeld in Sources */,
+				C9D136F1209C89C900BFEC51 /* DetailsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D136CB209AEF4F00BFEC51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D136D4209AEF4F00BFEC51 /* EmagScraperFromZeroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9D136D1209AEF4F00BFEC51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9D136B7209AEF4E00BFEC51 /* EmagScraperFromZero */;
+			targetProxy = C9D136D0209AEF4F00BFEC51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9D136BF209AEF4E00BFEC51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9D136C0209AEF4E00BFEC51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9D136C7209AEF4F00BFEC51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9D136C8209AEF4F00BFEC51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9D136D6209AEF4F00BFEC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9D136D7209AEF4F00BFEC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9D136D9209AEF4F00BFEC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D4799AA2F96A4AFFE074138 /* Pods-EmagScraperFromZero.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3DF7U8AUXW;
+				INFOPLIST_FILE = "$(SRCROOT)/EmagScraperFromZero/AppScaffolding/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.zeni.EmagScraperFromZero;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C9D136DA209AEF4F00BFEC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 433F3ED8A72B8B76ADCBA989 /* Pods-EmagScraperFromZero.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3DF7U8AUXW;
+				INFOPLIST_FILE = "$(SRCROOT)/EmagScraperFromZero/AppScaffolding/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.zeni.EmagScraperFromZero;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C9D136DC209AEF4F00BFEC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD80575796B0EE8FE8D091BB /* Pods-EmagScraperFromZeroTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EmagScraperFromZeroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.zeni.EmagScraperFromZeroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmagScraperFromZero.app/EmagScraperFromZero";
+			};
+			name = Debug;
+		};
+		C9D136DD209AEF4F00BFEC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58834EAC54540C5BF0EB2A66 /* Pods-EmagScraperFromZeroTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EmagScraperFromZeroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.zeni.EmagScraperFromZeroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmagScraperFromZero.app/EmagScraperFromZero";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9D136B3209AEF4E00BFEC51 /* Build configuration list for PBXProject "EmagScraperFromZero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D136D6209AEF4F00BFEC51 /* Debug */,
+				C9D136D7209AEF4F00BFEC51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9D136D8209AEF4F00BFEC51 /* Build configuration list for PBXNativeTarget "EmagScraperFromZero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D136D9209AEF4F00BFEC51 /* Debug */,
+				C9D136DA209AEF4F00BFEC51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9D136DB209AEF4F00BFEC51 /* Build configuration list for PBXNativeTarget "EmagScraperFromZeroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D136DC209AEF4F00BFEC51 /* Debug */,
+				C9D136DD209AEF4F00BFEC51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C9D136C2209AEF4E00BFEC51 /* EmagScraperFromZero.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C9D136C3209AEF4E00BFEC51 /* EmagScraperFromZero.xcdatamodel */,
+			);
+			currentVersion = C9D136C3209AEF4E00BFEC51 /* EmagScraperFromZero.xcdatamodel */;
+			path = EmagScraperFromZero.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C9D136B0209AEF4E00BFEC51 /* Project object */;
+}

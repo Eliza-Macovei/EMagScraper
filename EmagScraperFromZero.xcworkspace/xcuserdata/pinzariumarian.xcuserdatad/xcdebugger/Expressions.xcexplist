@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            <PersistentString
+               value = "tapGestureRecognizer.view">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in PageViewController.updateUI():PageViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ItemTableViewController.prepare(for:sender:):ItemTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "EMagDetailsParser.detailsBuilder(_:_:_:_:):EMagDetailsParser.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "rootNode.select(&quot;.delivery-estimate-col-lg&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PageViewController.generateVC(number:):PageViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ItemTableViewController.imageTapped(tapGestureRecognizer:):ItemTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tapGestureRecognizer.view?.tag">
+            </PersistentString>
+            <PersistentString
+               value = "tableView.indexPathsForVisibleRows">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "UIViewController.imageTapped(tapGestureRecognizer:sender:):Extension+Nav.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DetailsViewController.handleTap(gesture:):DetailsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tapLocation">
+            </PersistentString>
+            <PersistentString
+               value = "coloredSquare.layer.presentation()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailsViewController.prepare(for:sender:):DetailsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DetailsItem.addThumbnailUrl(stringUrl:):DetailsItem.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(stringUrl?.isEmpty)!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in EMagDetailsParser.parse(url:completion:):EMagDetailsParser.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "doc.select(&quot;.delivery&quot;).first()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in UIImageView.loadImageUsingUrlString(url:):Extension+Nav.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "MyImageCache.sharedCache.countLimit">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailsViewController.setValues(_:):DetailsViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
