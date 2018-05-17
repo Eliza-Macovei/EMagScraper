@@ -9,8 +9,7 @@
 import UIKit
 import Foundation
 
-struct DetailsItem {
-    var image: UIImage?
+class DetailsItem {
     var imageUrl: URL?
     let title: String
     let availability: String
@@ -19,8 +18,11 @@ struct DetailsItem {
     let descr: String
     let specs: String?
     
+    var listOfThumbnailUrls: [URL?] = []
+    
+    weak var previewItem: PreviewItem? = nil
+    
     init(_ imageUrl: String?, _ title: String, _ availability: String, _ shippingType: String, _ seller: String, _ descr: String, _ specs: String?) {
-        self.image = nil
         self.imageUrl = imageUrl == nil ? nil : URL(string: imageUrl!)
         self.title = title
         self.availability = availability
@@ -30,4 +32,14 @@ struct DetailsItem {
         self.specs = specs
     }
     
+    func addThumbnailUrl(stringUrl: String?) {
+        guard stringUrl != nil && !((stringUrl?.isEmpty)!) else {
+            return
+        }
+        
+        let url = URL(string: stringUrl!)
+        if !listOfThumbnailUrls.contains(url) {
+            listOfThumbnailUrls.append(url)
+        }
+    }
 }

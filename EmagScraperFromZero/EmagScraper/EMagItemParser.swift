@@ -10,33 +10,35 @@ import Foundation
 import SwiftSoup
 
 class EmagItemParser {
-    func parse(url: URL) -> [PreviewItem] {
+    func parse(url: URL, completion: @escaping ((_ data: [PreviewItem]) -> Void)) {
         var results = [PreviewItem]()
-        let fullHtml = HtmlReader().getHtml(url: url)
         
-        //print(" >> EP > parse() retrieved html of length \(fullHtml.count)")
-        do {
-            let doc = try SwiftSoup.parse(fullHtml)
-            // ?? what about count and extra items / next page of results ??
-            let cards = try doc.getElementsByClass("card") // 36 results, aka the first page.
+        HtmlReader().getHtml(url: url, completion: { (fullHtml: String?) in
             
-            for card in cards {
-                if let preview = getFieldsFromCard(card) {
-                    results.append(preview)
-                } else { print(" could not parse a valid PreviewItem from card node.") }
+            if fullHtml != nil {
+                do {
+                    let doc = try SwiftSoup.parse(fullHtml!)
+                    // ?? what about count and extra items / next page of results ??
+                    let cards = try doc.getElementsByClass("card") // 36 results, aka the first page.
+                    
+                    for card in cards {
+                        if let preview = self.getFieldsFromCard(card) {
+                            results.append(preview)
+                        } else { print(" could not parse a valid PreviewItem from card node.") }
+                    }
+                    
+                    completion(results)
+                } catch Exception.Error(let type, let message) {
+                    print("Exception of type \(type) with message\n  [\(message)]")
+                } catch {
+                    print("Unknown error while parsing HTML input from URL '\(url)' (working with \(fullHtml!.count) characters) ")
+                }
             }
-        } catch Exception.Error(let type, let message) {
-            print("Exception of type \(type) with message\n  [\(message)]")
-            //onError(type, message)
-        } catch {
-            print("Unknown error while parsing HTML input from URL '\(url)' (working with \(fullHtml.count) characters) ")
-        }
-        
-        return results
+        })
     }
     
     private func getFieldsFromCard(_ card: Element) -> PreviewItem? {
-        
+    
         var detailsUrl, thumbnailUrl: String?
         if let heading = card.tryGetElement("div.card-heading"),
             let linkNode = heading.tryGetElement("a")  {
@@ -79,8 +81,8 @@ class EmagItemParser {
                 price = wholePrice + Double(cents)/100
             }
         }
+        
         // get raw strings from card, add to items.
         return PreviewItem("eMag", title, thumbnailUrl, price, coin, detailsUrl)
     }
-    
 }

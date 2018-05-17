@@ -10,6 +10,7 @@ import UIKit
 
 class ItemTableViewController: UITableViewController {
     
+    // MARK: Properties
     var items = [PreviewItem]()
     
     override func viewDidLoad() {
@@ -18,35 +19,37 @@ class ItemTableViewController: UITableViewController {
         // set the 'eMag' back button; in here, its identical to the back button.
         let onTap = UITapGestureRecognizer(target: self, action: #selector(goToFirst))
         navigationItem.addButtonNav(onTap: onTap)
+        
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
     }
 
-    // MARK: - Navigation
-    // to Search:
-    @objc private func goToFirst() {
-        if let nc = navigationController {
-            nc.popToRootViewController(animated: true)
-        } else { print ("No nav controller is found") }
-    }
-
     // To Details:
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is DetailsViewController {
-            let detailsVC = segue.destination as! DetailsViewController
-            if  let rowView = sender as? ItemTableViewCell {
-                let id = rowView.txtTitle.text
-                if let itemModel = items.first(where: {m in m.title == id}) {
-                    detailsVC.model = EmagScraper.instance.getDetails(itemModel)
-                } else {
-                    print ("cannot locate row model for details navigation")
-                }
+        if sender != nil {
+           let indexPath =  (sender as? IndexPath) ?? tableView.indexPathForSelectedRow!
+           let itemModel = items[indexPath.row]
+           let pageVC = segue.destination as? PageViewController
+           let detailsVC = segue.destination as? DetailsViewController
+            
+            if pageVC != nil && itemModel.detailsItem != nil {
+                pageVC?.haveEmptyPage = false
             }
-        } else { print("SEGUE: destination is not a DetailsViewController") }
+            
+            EmagScraper.instance.getDetails(itemModel, callbackDetails: { (detailsItem: DetailsItem?) in
+                
+                DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+                    if detailsVC != nil {
+                        detailsVC?.model = detailsItem
+                    } else if pageVC != nil {
+                        pageVC?.listOfUrlsForImage = (detailsItem?.listOfThumbnailUrls)!
+                    }
+                })
+            })
+        }
     }
 
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -55,19 +58,24 @@ class ItemTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemViewController", for: indexPath) as? ItemTableViewCell
             else { fatalError("The dequeued cell is not an instance of ItemTableViewCell.")
         }
-/* "the above code requests a cell from the table view. Instead of creating new cells and deleting old cells as the user scrolls, the table tries to reuse the cells when possible. If no cells are available, dequeueReusableCell(withIdentifier:for:) instantiates a new one; however, as cells scroll off the scene, they are reused. The identifier tells dequeueReusableCell(withIdentifier:for:) which type of cell it should create or reuse." */
+        
+        /* "the above code requests a cell from the table view. Instead of creating new cells and deleting old cells as the user scrolls, the table tries to reuse the cells when possible. If no cells are available, dequeueReusableCell(withIdentifier:for:) instantiates a new one; however, as cells scroll off the scene, they are reused. The identifier tells dequeueReusableCell(withIdentifier:for:) which type of cell it should create or reuse." */
         
         // Configure the cell...
         let model = items[indexPath.row]
         cell.model = model // without thumbnail; we're filling that asynchronously.
-
+        if model.thumbnailUrl != nil {
+            cell.imgThumbnail.setupImageViewForGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTapped)))
+        }
+        
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if  cell is ItemTableViewCell {
-            let itemCell = cell as! ItemTableViewCell
-            itemCell.fillThumbnailIfEmpty()
-        }
+    
+    @objc override func imageTapped(tapGestureRecognizer: UITapGestureRecognizer, sender: Any?) {
+        let touch = tapGestureRecognizer.location(in: tableView)
+        let cell = tableView.indexPathForRow(at: touch)
+        
+        super.imageTapped(tapGestureRecognizer: tapGestureRecognizer, sender: cell)
     }
 }

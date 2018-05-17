@@ -51,7 +51,6 @@ extension Element {
     
     // MARK - error handling
     private static func onError(_ type: ExceptionType, _ msg: String) {
-        
+        print("Element with type: '\(type)' and message: \(msg)")
     }
-    
 }

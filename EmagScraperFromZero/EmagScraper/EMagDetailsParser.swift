@@ -11,28 +11,36 @@ import SwiftSoup
 
 class EMagDetailsParser {
 
-    func parse(url: URL) -> DetailsItem? {
+    func parse(url: URL, completion: @escaping ((_ data: DetailsItem?) -> Void)) {
         // get html from url.
-        let fullHtml = HtmlReader().getHtml(url: url)
-        do {
-            // locate the 'root' node of what I'm intersted in.
-            let doc = try SwiftSoup.parse(fullHtml)
-            if let containerNode = try doc.select("div#main-container").first() {
-                let rootNode = containerNode.tryGetElement("div.container")
-                let specsNode = containerNode.tryGetElement("div#specifications-body")
-                let descriptionNode = containerNode.tryGetElement("div#description-body")
-                return detailsBuilder(rootNode, specsNode, descriptionNode)
+        
+        HtmlReader().getHtml(url: url, completion: { (fullHtml: String?) in
+            
+            if fullHtml != nil {
+                do {
+                    // locate the 'root' node of what I'm intersted in.
+                    let doc = try SwiftSoup.parse(fullHtml!)
+                    if let containerNode = try doc.select("div#main-container").first() {
+                        let rootNode = containerNode.tryGetElement("div.container")
+                        let specsNode = containerNode.tryGetElement("div#specifications-body")
+                        let descriptionNode = containerNode.tryGetElement("div#description-body")
+                        let galleryNode = try containerNode.select(".product-gallery").first()
+                        
+                        let detailsItem = self.detailsBuilder(rootNode, specsNode, descriptionNode, galleryNode)
+                        
+                        completion(detailsItem)
+                    }
+                } catch Exception.Error(let type, let message) {
+                    print("Exception of type \(type) with message\n  [\(message)]")
+                    //onError(type, message)
+                } catch {
+                    print("Unknown error while parsing HTML input from URL '\(url)' (working with \(fullHtml?.count ?? 0) characters) ")
+                }
             }
-        } catch Exception.Error(let type, let message) {
-            print("Exception of type \(type) with message\n  [\(message)]")
-            //onError(type, message)
-        } catch {
-            print("Unknown error while parsing HTML input from URL '\(url)' (working with \(fullHtml.count) characters) ")
-        }
-        return nil
+        })
     }
     
-    private func detailsBuilder(_ rootNode: Element?, _ specsNode: Element?, _ descrNode: Element?) -> DetailsItem? {
+    private func detailsBuilder(_ rootNode: Element?, _ specsNode: Element?, _ descrNode: Element?, _ galleryNode: Element?) -> DetailsItem? {
         var title = "", availability = "", shippingType  = "", seller = ""
         //: String
         var imgUrl: String? = nil
@@ -63,6 +71,11 @@ class EMagDetailsParser {
                 }
                 
                 //shipping type - the worst, because it's location dependent... and is a list.
+                if let shippingTypeNode = rootNode.tryGetElement(".product-delivery-options > li:nth-child(2) > p") {
+//                    let val = shippingTypeNode.tryGetElement("div.delivery-estimate-col-lg")
+                    shippingType = shippingTypeNode.tryGetText()
+                } //em em-free-delivery_fill
+                //product-delivery-options list-unstyled mrg-sep-none
                 
                 //#main-container > section:nth-child(1) > div > div:nth-child(4) > div.col-sm-5.col-md-6.col-lg-7 > div > form > div > div.col-sm-12.col-md-6.col-lg-5 > div:nth-child(5) > div > div.delivery-estimate-border-top.delivery-estimate-border-btm > div > div.delivery-estimate-col-lg.v-align-middle > div
                 //#main-container > section:nth-child(1) > div > div:nth-child(4) > div.col-sm-5.col-md-6.col-lg-7 > div > form > div > div.col-sm-12.col-md-6.col-lg-5 > div:nth-child(5) > div > div:nth-child(3) > div > div.delivery-estimate-col-lg.v-align-middle > div
@@ -85,6 +98,19 @@ class EMagDetailsParser {
         if let specsNode = specsNode {
             specs = specsNode.tryGetText() // might not work at all well; the specs table is fairly complex.
         }
-        return DetailsItem(imgUrl, title, availability, shippingType, seller, descr, specs)
+        
+        let detailsItem = DetailsItem(imgUrl, title, availability, shippingType, seller, descr, specs)
+        
+        if galleryNode != nil {
+            if let galleryNodeValues = try? galleryNode?.select(".thumbnail") {
+                for element in galleryNodeValues! {
+                    if let imageValue = try? element.select("a").first()?.attr("href") {
+                        detailsItem.addThumbnailUrl(stringUrl: imageValue)
+                    }
+                }
+            }
+        }
+        
+        return detailsItem
     }
 }

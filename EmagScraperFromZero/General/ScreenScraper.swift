@@ -12,7 +12,7 @@ protocol ScreenScraper {
     
     var baseUrl: String { get }
     
-    func search(_ searchRaw: String) -> [PreviewItem]
-    
-    func getDetails(_ item: PreviewItem) -> DetailsItem?
+    func search(_ searchRaw: String, callbackSearch: @escaping (([PreviewItem]) -> Void))
+        
+    func getDetails(_ item: PreviewItem, callbackDetails: @escaping ((DetailsItem?) -> Void))
 }
