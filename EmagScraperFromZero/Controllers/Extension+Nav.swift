@@ -49,48 +49,6 @@ extension UIViewController {
     }
 }
 
-extension UIImageView {
-    func loadImageUsingUrlString(urlString: String) {
-        loadImageUsingUrlString(url: URL(string: urlString)!)
-    }
-    
-    func loadImageUsingUrlString(url: URL) {
-        
-        self.image = nil
-
-        if let imageFromCache = ImageCache.sharedCache.object(forKey: url.absoluteURL as AnyObject) as? UIImage {
-            self.image = imageFromCache
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url, completionHandler: {
-            (data, response, error) in
-            
-            if error != nil {
-                print(error ?? "")
-                self.image = #imageLiteral(resourceName: "noInternet")
-
-                return
-            }
-            
-            DispatchQueue.main.asyncAfter(deadline: .now(), execute: { [weak self] in
-                
-                let imageToCache = UIImage(data: data!)
-                
-                ImageCache.sharedCache.setObject(imageToCache!, forKey: url.absoluteURL as AnyObject, cost: (data?.count)!)
-                
-                self?.image = imageToCache
-            })
-            
-        }).resume()
-    }
-    
-    public func setupImageViewForGestureRecognizer(_ tapGestureRecognizer: UITapGestureRecognizer) {
-        self.isUserInteractionEnabled = true
-        self.addGestureRecognizer(tapGestureRecognizer)
-    }
-}
-
 extension UIImage {
     static func from(color: UIColor) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)

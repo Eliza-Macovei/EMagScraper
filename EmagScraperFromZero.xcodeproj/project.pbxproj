@@ -8,7 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		4E963D333E2F5C7A33D3FE6F /* Pods_EmagScraperFromZero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB853D9232353AB68F18E1C /* Pods_EmagScraperFromZero.framework */; };
+		602505D520AD8BEC003D4814 /* DetailsItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602505D420AD8BEC003D4814 /* DetailsItemTests.swift */; };
+		602505DB20AD9C69003D4814 /* HtmlReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602505DA20AD9C69003D4814 /* HtmlReaderTests.swift */; };
+		602505DD20ADA780003D4814 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602505DC20ADA780003D4814 /* ExtensionTests.swift */; };
+		602505DF20ADAD12003D4814 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602505DE20ADAD12003D4814 /* Constants.swift */; };
+		602505E120ADB3C4003D4814 /* EmagScraperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602505E020ADB3C4003D4814 /* EmagScraperTests.swift */; };
 		6094D44C20A983FC000F76E1 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6094D44B20A983FC000F76E1 /* ImageCache.swift */; };
+		60A6762C20AEF39F003A8107 /* HtmlReaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6762B20AEF39F003A8107 /* HtmlReaderMock.swift */; };
+		60A6763420AF29B9003A8107 /* search_apple.htm in Resources */ = {isa = PBXBuildFile; fileRef = 60A6763320AF29B9003A8107 /* search_apple.htm */; };
+		60A6763620AF2A3B003A8107 /* appleIPhone6.htm in Resources */ = {isa = PBXBuildFile; fileRef = 60A6763520AF2A3B003A8107 /* appleIPhone6.htm */; };
+		60B8A62320ADC5D8007D913B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D136C5209AEF4F00BFEC51 /* Assets.xcassets */; };
+		60B8A62520ADD56F007D913B /* EmagItemParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8A62420ADD56F007D913B /* EmagItemParserTests.swift */; };
 		60C279CA20A4969400765EF3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C279C920A4969400765EF3 /* ImageViewController.swift */; };
 		60C279CC20A496CD00765EF3 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C279CB20A496CD00765EF3 /* PageViewController.swift */; };
 		C79830FFF9990C02A8EEBAF2 /* Pods_EmagScraperFromZeroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCDA12B472799DC82423D33 /* Pods_EmagScraperFromZeroTests.framework */; };
@@ -23,7 +33,6 @@
 		C9D136C4209AEF4E00BFEC51 /* EmagScraperFromZero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9D136C2209AEF4E00BFEC51 /* EmagScraperFromZero.xcdatamodeld */; };
 		C9D136C6209AEF4F00BFEC51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D136C5209AEF4F00BFEC51 /* Assets.xcassets */; };
 		C9D136C9209AEF4F00BFEC51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D136C7209AEF4F00BFEC51 /* LaunchScreen.storyboard */; };
-		C9D136D4209AEF4F00BFEC51 /* EmagScraperFromZeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136D3209AEF4F00BFEC51 /* EmagScraperFromZeroTests.swift */; };
 		C9D136E3209AF1A500BFEC51 /* DetailsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136E1209AF1A500BFEC51 /* DetailsItem.swift */; };
 		C9D136E4209AF1A500BFEC51 /* PreviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136E2209AF1A500BFEC51 /* PreviewItem.swift */; };
 		C9D136E7209AF1B400BFEC51 /* EmagScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D136E5209AF1B400BFEC51 /* EmagScraper.swift */; };
@@ -48,7 +57,16 @@
 		3D4799AA2F96A4AFFE074138 /* Pods-EmagScraperFromZero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmagScraperFromZero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmagScraperFromZero/Pods-EmagScraperFromZero.debug.xcconfig"; sourceTree = "<group>"; };
 		433F3ED8A72B8B76ADCBA989 /* Pods-EmagScraperFromZero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmagScraperFromZero.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmagScraperFromZero/Pods-EmagScraperFromZero.release.xcconfig"; sourceTree = "<group>"; };
 		58834EAC54540C5BF0EB2A66 /* Pods-EmagScraperFromZeroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmagScraperFromZeroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmagScraperFromZeroTests/Pods-EmagScraperFromZeroTests.release.xcconfig"; sourceTree = "<group>"; };
+		602505D420AD8BEC003D4814 /* DetailsItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsItemTests.swift; sourceTree = "<group>"; };
+		602505DA20AD9C69003D4814 /* HtmlReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlReaderTests.swift; sourceTree = "<group>"; };
+		602505DC20ADA780003D4814 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
+		602505DE20ADAD12003D4814 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		602505E020ADB3C4003D4814 /* EmagScraperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmagScraperTests.swift; sourceTree = "<group>"; };
 		6094D44B20A983FC000F76E1 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		60A6762B20AEF39F003A8107 /* HtmlReaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlReaderMock.swift; sourceTree = "<group>"; };
+		60A6763320AF29B9003A8107 /* search_apple.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = search_apple.htm; sourceTree = "<group>"; };
+		60A6763520AF2A3B003A8107 /* appleIPhone6.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = appleIPhone6.htm; sourceTree = "<group>"; };
+		60B8A62420ADD56F007D913B /* EmagItemParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmagItemParserTests.swift; sourceTree = "<group>"; };
 		60C279C920A4969400765EF3 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		60C279CB20A496CD00765EF3 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		9FCDA12B472799DC82423D33 /* Pods_EmagScraperFromZeroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmagScraperFromZeroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,7 +85,6 @@
 		C9D136C8209AEF4F00BFEC51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9D136CA209AEF4F00BFEC51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9D136CF209AEF4F00BFEC51 /* EmagScraperFromZeroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmagScraperFromZeroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9D136D3209AEF4F00BFEC51 /* EmagScraperFromZeroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmagScraperFromZeroTests.swift; sourceTree = "<group>"; };
 		C9D136D5209AEF4F00BFEC51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9D136E1209AF1A500BFEC51 /* DetailsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsItem.swift; sourceTree = "<group>"; };
 		C9D136E2209AF1A500BFEC51 /* PreviewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewItem.swift; sourceTree = "<group>"; };
@@ -120,6 +137,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		602505D120AD8AF1003D4814 /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				C9D136D5209AEF4F00BFEC51 /* Info.plist */,
+			);
+			name = "Support files";
+			sourceTree = "<group>";
+		};
+		602505D220AD8B12003D4814 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				602505DE20ADAD12003D4814 /* Constants.swift */,
+				60A6762B20AEF39F003A8107 /* HtmlReaderMock.swift */,
+				60A6763320AF29B9003A8107 /* search_apple.htm */,
+				60A6763520AF2A3B003A8107 /* appleIPhone6.htm */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		602505D320AD8B32003D4814 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				602505E020ADB3C4003D4814 /* EmagScraperTests.swift */,
+				60B8A62420ADD56F007D913B /* EmagItemParserTests.swift */,
+				602505D420AD8BEC003D4814 /* DetailsItemTests.swift */,
+				602505DA20AD9C69003D4814 /* HtmlReaderTests.swift */,
+				602505DC20ADA780003D4814 /* ExtensionTests.swift */,
+			);
+			name = Cases;
+			sourceTree = "<group>";
+		};
 		C95CA7AB20A1BFD900500CF0 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,8 +214,9 @@
 		C9D136D2209AEF4F00BFEC51 /* EmagScraperFromZeroTests */ = {
 			isa = PBXGroup;
 			children = (
-				C9D136D3209AEF4F00BFEC51 /* EmagScraperFromZeroTests.swift */,
-				C9D136D5209AEF4F00BFEC51 /* Info.plist */,
+				602505D320AD8B32003D4814 /* Cases */,
+				602505D220AD8B12003D4814 /* Data */,
+				602505D120AD8AF1003D4814 /* Support files */,
 			);
 			path = EmagScraperFromZeroTests;
 			sourceTree = "<group>";
@@ -313,6 +362,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60B8A62320ADC5D8007D913B /* Assets.xcassets in Resources */,
+				60A6763420AF29B9003A8107 /* search_apple.htm in Resources */,
+				60A6763620AF2A3B003A8107 /* appleIPhone6.htm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +458,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9D136D4209AEF4F00BFEC51 /* EmagScraperFromZeroTests.swift in Sources */,
+				602505E120ADB3C4003D4814 /* EmagScraperTests.swift in Sources */,
+				60A6762C20AEF39F003A8107 /* HtmlReaderMock.swift in Sources */,
+				60B8A62520ADD56F007D913B /* EmagItemParserTests.swift in Sources */,
+				602505DF20ADAD12003D4814 /* Constants.swift in Sources */,
+				602505DB20AD9C69003D4814 /* HtmlReaderTests.swift in Sources */,
+				602505D520AD8BEC003D4814 /* DetailsItemTests.swift in Sources */,
+				602505DD20ADA780003D4814 /* ExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +657,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3DF7U8AUXW;
 				INFOPLIST_FILE = EmagScraperFromZeroTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -620,6 +679,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3DF7U8AUXW;
 				INFOPLIST_FILE = EmagScraperFromZeroTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -11,10 +11,22 @@ import SwiftSoup
 
 class EMagDetailsParser {
 
+    private var htmlReader: HtmlReaderProtocol!
+    
+    init() {
+        self.htmlReader = HtmlReader()
+    }
+    
+    convenience init(_ htmlReader: HtmlReaderProtocol) {
+        self.init()
+        
+        self.htmlReader = htmlReader
+    }
+    
     func parse(url: URL, completion: @escaping ((_ data: DetailsItem?) -> Void)) {
         // get html from url.
         
-        HtmlReader().getHtml(url: url, completion: { (fullHtml: String?) in
+        htmlReader.getHtml(url: url, completion: { (fullHtml: String?) in
             
             if fullHtml != nil {
                 do {

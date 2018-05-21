@@ -12,9 +12,22 @@ import Foundation
 class EmagScraper : ScreenScraper {
         
     static let instance = EmagScraper()
-    private init() { }
     
+    private var emagItemParser: EmagItemParser!
+    private var emagDetailsParser: EMagDetailsParser!
     private(set) var baseUrl: String = "https://m.emag.ro/search/"
+    
+    init() {
+        self.emagItemParser = EmagItemParser()
+        self.emagDetailsParser = EMagDetailsParser()
+    }
+    
+    convenience init(_ htmlReader: HtmlReaderProtocol) {
+        self.init()
+        
+        self.emagItemParser = EmagItemParser(htmlReader)
+        self.emagDetailsParser = EMagDetailsParser(htmlReader)
+    }
     
     func search(_ searchRaw: String, callbackSearch: @escaping (([PreviewItem]) -> Void)) {
         
@@ -22,7 +35,7 @@ class EmagScraper : ScreenScraper {
             // append to baseUrl; not using a pre-made URL because appendingPathComponent is mutating.
             let url = URL(string: baseUrl)!.appendingPathComponent(searchRaw)
             
-            EmagItemParser().parse(url: url, completion: { (items: [PreviewItem]) in
+            emagItemParser.parse(url: url, completion: { (items: [PreviewItem]) in
                 print("...done; returning \(items.count) items.")
                 callbackSearch(items)
             })
@@ -36,7 +49,7 @@ class EmagScraper : ScreenScraper {
     func getDetails(_ item: PreviewItem, callbackDetails: @escaping ((DetailsItem?) -> Void)) {
         // from item, build the URL that returns the details.
         if let url = item.detailsUrl, item.detailsItem == nil {
-            EMagDetailsParser().parse(url: url, completion: { (detailsItem: DetailsItem?) in
+            emagDetailsParser.parse(url: url, completion: { (detailsItem: DetailsItem?) in
                 detailsItem?.previewItem = item
                 item.detailsItem = detailsItem
                 
