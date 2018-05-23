@@ -11,17 +11,20 @@ import XCTest
 
 class HtmlReaderTests: XCTestCase {
     
-    private var htmlReader: HtmlReaderProtocol?
+    private var htmlReader: HtmlReader?
+    private var mockURLSession: MockURLSession?
     
     override func setUp() {
         super.setUp()
         
-        htmlReader = HtmlReader()
+        mockURLSession = MockURLSession()
+        htmlReader = HtmlReader(session: mockURLSession!)
     }
     
     override func tearDown() {
         super.tearDown()
         
+        mockURLSession = nil
         htmlReader = nil
     }
     
@@ -29,9 +32,8 @@ class HtmlReaderTests: XCTestCase {
         let expectation = self.expectation(description: Constants.Expectation.getDescription("Html with value"))
         
         if let url = URL(string: "\(Constants.URLConst.EmagURL)search/apple") {
-            htmlReader?.getHtml(url: url, completion: {
-                XCTAssertNotNil($0)
-                
+            htmlReader?.getHtml(url: url, completion: {_ in
+                XCTAssertEqual((self.htmlReader?.session as? MockURLSession)?.dataTaskLastURL, url)
                 expectation.fulfill()
             })
         }
@@ -49,8 +51,8 @@ class HtmlReaderTests: XCTestCase {
         expectation.isInverted = true
         
         if let url = URL(string: "test") {
-            htmlReader?.getHtml(url: url, completion: {
-                XCTAssertNil($0)
+            htmlReader?.getHtml(url: url, completion: {_ in
+                XCTAssertNotEqual((self.htmlReader?.session as? MockURLSession)?.dataTaskLastURL?.absoluteString, url.absoluteString)
                 
                 expectation.fulfill()
             })

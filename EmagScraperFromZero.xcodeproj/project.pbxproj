@@ -13,6 +13,7 @@
 		602505DD20ADA780003D4814 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602505DC20ADA780003D4814 /* ExtensionTests.swift */; };
 		602505DF20ADAD12003D4814 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602505DE20ADAD12003D4814 /* Constants.swift */; };
 		602505E120ADB3C4003D4814 /* EmagScraperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602505E020ADB3C4003D4814 /* EmagScraperTests.swift */; };
+		606E851320B3148100B61439 /* EmagScraperFromZeroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606E851220B3148100B61439 /* EmagScraperFromZeroUITests.swift */; };
 		6094D44C20A983FC000F76E1 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6094D44B20A983FC000F76E1 /* ImageCache.swift */; };
 		60A6762C20AEF39F003A8107 /* HtmlReaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6762B20AEF39F003A8107 /* HtmlReaderMock.swift */; };
 		60A6763420AF29B9003A8107 /* search_apple.htm in Resources */ = {isa = PBXBuildFile; fileRef = 60A6763320AF29B9003A8107 /* search_apple.htm */; };
@@ -44,6 +45,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		606E851520B3148100B61439 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9D136B0209AEF4E00BFEC51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9D136B7209AEF4E00BFEC51;
+			remoteInfo = EmagScraperFromZero;
+		};
 		C9D136D0209AEF4F00BFEC51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9D136B0209AEF4E00BFEC51 /* Project object */;
@@ -62,6 +70,9 @@
 		602505DC20ADA780003D4814 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		602505DE20ADAD12003D4814 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		602505E020ADB3C4003D4814 /* EmagScraperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmagScraperTests.swift; sourceTree = "<group>"; };
+		606E851020B3148100B61439 /* EmagScraperFromZeroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmagScraperFromZeroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		606E851220B3148100B61439 /* EmagScraperFromZeroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmagScraperFromZeroUITests.swift; sourceTree = "<group>"; };
+		606E851420B3148100B61439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6094D44B20A983FC000F76E1 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		60A6762B20AEF39F003A8107 /* HtmlReaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlReaderMock.swift; sourceTree = "<group>"; };
 		60A6763320AF29B9003A8107 /* search_apple.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = search_apple.htm; sourceTree = "<group>"; };
@@ -98,6 +109,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		606E850D20B3148100B61439 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9D136B5209AEF4E00BFEC51 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,6 +186,23 @@
 			name = Cases;
 			sourceTree = "<group>";
 		};
+		606E851120B3148100B61439 /* EmagScraperFromZeroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				606E851220B3148100B61439 /* EmagScraperFromZeroUITests.swift */,
+				606E851A20B314C200B61439 /* Support files */,
+			);
+			path = EmagScraperFromZeroUITests;
+			sourceTree = "<group>";
+		};
+		606E851A20B314C200B61439 /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				606E851420B3148100B61439 /* Info.plist */,
+			);
+			name = "Support files";
+			sourceTree = "<group>";
+		};
 		C95CA7AB20A1BFD900500CF0 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +218,7 @@
 			children = (
 				C9D136BA209AEF4E00BFEC51 /* EmagScraperFromZero */,
 				C9D136D2209AEF4F00BFEC51 /* EmagScraperFromZeroTests */,
+				606E851120B3148100B61439 /* EmagScraperFromZeroUITests */,
 				C9D136B9209AEF4E00BFEC51 /* Products */,
 				1010240A937131D7F94AA941 /* Pods */,
 				44A5DAD116DAB98BF026CFBC /* Frameworks */,
@@ -194,6 +230,7 @@
 			children = (
 				C9D136B8209AEF4E00BFEC51 /* EmagScraperFromZero.app */,
 				C9D136CF209AEF4F00BFEC51 /* EmagScraperFromZeroTests.xctest */,
+				606E851020B3148100B61439 /* EmagScraperFromZeroUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,6 +308,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		606E850F20B3148100B61439 /* EmagScraperFromZeroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 606E851720B3148100B61439 /* Build configuration list for PBXNativeTarget "EmagScraperFromZeroUITests" */;
+			buildPhases = (
+				606E850C20B3148100B61439 /* Sources */,
+				606E850D20B3148100B61439 /* Frameworks */,
+				606E850E20B3148100B61439 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				606E851620B3148100B61439 /* PBXTargetDependency */,
+			);
+			name = EmagScraperFromZeroUITests;
+			productName = EmagScraperFromZeroUITests;
+			productReference = 606E851020B3148100B61439 /* EmagScraperFromZeroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C9D136B7209AEF4E00BFEC51 /* EmagScraperFromZero */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9D136D8209AEF4F00BFEC51 /* Build configuration list for PBXNativeTarget "EmagScraperFromZero" */;
@@ -319,6 +374,10 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Elizabeta Macovei";
 				TargetAttributes = {
+					606E850F20B3148100B61439 = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = C9D136B7209AEF4E00BFEC51;
+					};
 					C9D136B7209AEF4E00BFEC51 = {
 						CreatedOnToolsVersion = 9.3;
 					};
@@ -343,11 +402,19 @@
 			targets = (
 				C9D136B7209AEF4E00BFEC51 /* EmagScraperFromZero */,
 				C9D136CE209AEF4F00BFEC51 /* EmagScraperFromZeroTests */,
+				606E850F20B3148100B61439 /* EmagScraperFromZeroUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		606E850E20B3148100B61439 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9D136B6209AEF4E00BFEC51 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,6 +495,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		606E850C20B3148100B61439 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				606E851320B3148100B61439 /* EmagScraperFromZeroUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9D136B4209AEF4E00BFEC51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,6 +546,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		606E851620B3148100B61439 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9D136B7209AEF4E00BFEC51 /* EmagScraperFromZero */;
+			targetProxy = 606E851520B3148100B61439 /* PBXContainerItemProxy */;
+		};
 		C9D136D1209AEF4F00BFEC51 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C9D136B7209AEF4E00BFEC51 /* EmagScraperFromZero */;
@@ -498,6 +578,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		606E851820B3148100B61439 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3DF7U8AUXW;
+				INFOPLIST_FILE = EmagScraperFromZeroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Zenitech-Development.EmagScraperFromZeroUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EmagScraperFromZero;
+			};
+			name = Debug;
+		};
+		606E851920B3148100B61439 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3DF7U8AUXW;
+				INFOPLIST_FILE = EmagScraperFromZeroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Zenitech-Development.EmagScraperFromZeroUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EmagScraperFromZero;
+			};
+			name = Release;
+		};
 		C9D136D6209AEF4F00BFEC51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -697,6 +815,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		606E851720B3148100B61439 /* Build configuration list for PBXNativeTarget "EmagScraperFromZeroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				606E851820B3148100B61439 /* Debug */,
+				606E851920B3148100B61439 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C9D136B3209AEF4E00BFEC51 /* Build configuration list for PBXProject "EmagScraperFromZero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

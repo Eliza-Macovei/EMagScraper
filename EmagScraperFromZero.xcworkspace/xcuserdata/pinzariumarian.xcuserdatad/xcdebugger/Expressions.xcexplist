@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "closure #1 in EMagDetailsParser.parse(url:completion:):EMagDetailsParser.swift">
+         contextName = "closure #2 in EmagItemParserTests.testParse_withoutUrl():EmagItemParserTests.swift">
          <PersistentStrings>
             <PersistentString
-               value = "doc.select(&quot;.delivery&quot;).first()">
+               value = "arrPreviewItem!">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -31,6 +31,14 @@
          contextName = "implicit closure #1 in HtmlReaderTests.testCompletionHandler_withData():HtmlReaderTests.swift">
       </ContextState>
       <ContextState
+         contextName = "closure #1 in HtmlReaderTests.testGetHtml_withValidSearch():HtmlReaderTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mockURLSession?.dataTaskLastURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "HtmlReaderTests.testCompletionHandler_withData():HtmlReaderTests.swift">
       </ContextState>
       <ContextState
@@ -53,6 +61,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "implicit closure #1 in closure #1 in HtmlReaderTests.testGetHtml_withValidSearch():HtmlReaderTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mockURLSession?.dataTaskLastURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in PageViewController.updateUI():PageViewController.swift">
       </ContextState>
       <ContextState
@@ -67,7 +83,21 @@
          contextName = "closure #1 in UIImageViewTests.testLoadImageUsingUrlString_withValidUrlString():ExtensionTests.swift">
       </ContextState>
       <ContextState
+         contextName = "EmagScraper.search(_:callbackSearch:):EmagScraper.swift">
+      </ContextState>
+      <ContextState
          contextName = "DetailsViewController.setValues(_:):DetailsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "HtmlReader.getHtml(url:completion:):Url+getHtml.swift">
+      </ContextState>
+      <ContextState
+         contextName = "EmagScraperFromZeroUITests.testPreviewImageAndSwipe_ofLenovoGame():EmagScraperFromZeroUITests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "image.Image">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "HtmlReaderTests.testGetHtml_withValidUrl():HtmlReaderTests.swift">
@@ -79,10 +109,10 @@
          contextName = "DetailsViewController.handleTap(gesture:):DetailsViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "tapLocation">
+               value = "coloredSquare.layer.presentation()">
             </PersistentString>
             <PersistentString
-               value = "coloredSquare.layer.presentation()">
+               value = "tapLocation">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -98,8 +128,19 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "AppDelegate.application(_:didFinishLaunchingWithOptions:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ProcessInfo.processInfo.environment">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "GLOBAL">
          <PersistentStrings>
+            <PersistentString
+               value = "self.window.rootViewController">
+            </PersistentString>
             <PersistentString
                value = "tapGestureRecognizer.view">
             </PersistentString>
@@ -133,15 +174,26 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DetailsViewController.prepare(for:sender:):DetailsViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "closure #2 in EmagItemParserTests.testParse_withoutUrl():EmagItemParserTests.swift">
+         contextName = "implicit closure #2 in closure #1 in HtmlReaderTests.testGetHtml_withValidSearch():HtmlReaderTests.swift">
          <PersistentStrings>
             <PersistentString
-               value = "arrPreviewItem!">
+               value = "self.mockURLSession?.dataTaskLastURL">
+            </PersistentString>
+            <PersistentString
+               value = "self">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in EMagDetailsParser.parse(url:completion:):EMagDetailsParser.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "doc.select(&quot;.delivery&quot;).first()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailsViewController.prepare(for:sender:):DetailsViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

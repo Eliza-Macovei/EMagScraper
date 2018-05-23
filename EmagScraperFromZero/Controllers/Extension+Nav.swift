@@ -15,6 +15,7 @@ extension UINavigationItem {
         imgEmagNav.contentMode = .scaleAspectFit
         imgEmagNav.isUserInteractionEnabled = true
         imgEmagNav.addGestureRecognizer(onTap)
+        imgEmagNav.isAccessibilityElement = true
         let btnWrapper = UIBarButtonItem(customView: imgEmagNav)
 
         btnWrapper.style = .done

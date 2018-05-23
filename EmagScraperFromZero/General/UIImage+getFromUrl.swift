@@ -12,9 +12,9 @@ import UIKit
 extension UIImageView {
     func loadImageUsingUrlString(urlString: String) {
         loadImageUsingUrlString(url: URL(string: urlString)!)
-    }
+    }    
     
-    func loadImageUsingUrlString(url: URL) {
+    func loadImageUsingUrlString(url: URL, _ session: URLSessionProtocol? = URLSession.shared) {
         
         self.image = nil
         
@@ -23,24 +23,24 @@ extension UIImageView {
             return
         }
         
-        URLSession.shared.dataTask(with: url, completionHandler: {
+        session?.dataTask(with: url, completionHandler: {
             (data, response, error) in
-            
+
             if error != nil {
                 print(error ?? "")
-                
+
                 return
             }
-            
+
             DispatchQueue.main.asyncAfter(deadline: .now(), execute: { [weak self] in
-                
+
                 let imageToCache = UIImage(data: data!)
-                
+
                 ImageCache.sharedCache.setObject(imageToCache!, forKey: url.absoluteURL as AnyObject, cost: (data?.count)!)
-                
+
                 self?.image = imageToCache
             })
-            
+
         }).resume()
     }
     

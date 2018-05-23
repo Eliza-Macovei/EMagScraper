@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmagScraperFromZero/General/Url+getHtml.swift"
-            timestampString = "548585101.397638"
+            timestampString = "548775134.522392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "getHtml(url:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EmagScraperFromZero/EmagScraper/EMagItemParser.swift"
-            timestampString = "548606284.8030061"
+            filePath = "EmagScraperFromZeroTests/HtmlReaderTests.swift"
+            timestampString = "548775134.522729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "parse(url:completion:)"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "testGetHtml_withInvalidSearch()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,46 +41,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EmagScraperFromZeroTests/Data/HtmlReaderMock.swift"
-            timestampString = "548606284.803315"
+            filePath = "EmagScraperFromZeroTests/HtmlReaderTests.swift"
+            timestampString = "548775134.523124"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "getHtml(url:completion:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "testGetHtml_withValidSearch()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EmagScraperFromZero/EmagScraper/Element+EmagReader.swift"
-            timestampString = "548589573.719123"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "tryGetElement(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EmagScraperFromZero/General/UIImage+getFromUrl.swift"
-            timestampString = "548606284.803565"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "loadImageUsingUrlString(url:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in EmagScraperFromZeroTests.HtmlReaderTests.testGetHtml_withValidSearch() -&gt; ()"
+                  moduleName = "EmagScraperFromZeroTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pinzariumarian/Documents/Dev/Git/EMagScraper/EMagScraper/EmagScraperFromZeroTests/HtmlReaderTests.swift"
+                  timestampString = "548774918.526161"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "162">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Optional&lt;Any&gt; in closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in EmagScraperFromZeroTests.HtmlReaderTests.testGetHtml_withValidSearch() -&gt; ()"
+                  moduleName = "EmagScraperFromZeroTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pinzariumarian/Documents/Dev/Git/EMagScraper/EMagScraper/EmagScraperFromZeroTests/HtmlReaderTests.swift"
+                  timestampString = "548774918.52839"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "59">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

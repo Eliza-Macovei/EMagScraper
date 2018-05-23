@@ -61,3 +61,28 @@ class HtmlReaderMock: HtmlReaderProtocol {
         return try? String(contentsOfFile: bundleFilePath, encoding: .utf8)
     }
 }
+
+class MockURLSessionDataTask: URLSessionDataTaskProtocol {
+    private (set) var resumeWasCalled = false
+    
+    func resume() {
+        resumeWasCalled = true
+    }
+}
+
+class MockURLSession: URLSessionProtocol {
+    var dataTaskWasCalled = false
+    var dataTaskCallCount = 0
+    var dataTaskLastURL: URL?
+    
+    func dataTask(with url: URL, completionHandler: @escaping (_ data:Data?,_ response:URLResponse?,_ error:Error?) -> Swift.Void) -> URLSessionDataTaskProtocol {
+        
+        dataTaskWasCalled = true
+        dataTaskCallCount += 1
+        dataTaskLastURL = url
+        
+        completionHandler(Data(), URLResponse(), nil)
+        
+        return MockURLSessionDataTask()
+    }
+}
