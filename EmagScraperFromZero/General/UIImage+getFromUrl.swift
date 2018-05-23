@@ -14,7 +14,7 @@ extension UIImageView {
         loadImageUsingUrlString(url: URL(string: urlString)!)
     }    
     
-    func loadImageUsingUrlString(url: URL, _ session: URLSessionProtocol? = URLSession.shared) {
+    func loadImageUsingUrlString(url: URL) {
         
         self.image = nil
         
@@ -23,7 +23,7 @@ extension UIImageView {
             return
         }
         
-        session?.dataTask(with: url, completionHandler: {
+        URLSession.shared.dataTask(with: url, completionHandler: {
             (data, response, error) in
 
             if error != nil {

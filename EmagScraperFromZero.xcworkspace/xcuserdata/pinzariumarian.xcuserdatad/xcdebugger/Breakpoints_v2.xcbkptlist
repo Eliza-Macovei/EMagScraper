@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmagScraperFromZero/General/Url+getHtml.swift"
-            timestampString = "548775134.522392"
+            timestampString = "548776948.25415"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "getHtml(url:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmagScraperFromZeroTests/HtmlReaderTests.swift"
-            timestampString = "548775134.522729"
+            timestampString = "548776948.254537"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "testGetHtml_withInvalidSearch()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmagScraperFromZeroTests/HtmlReaderTests.swift"
-            timestampString = "548775134.523124"
+            timestampString = "548776948.25463"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "testGetHtml_withValidSearch()"
             landmarkType = "7">
             <Locations>

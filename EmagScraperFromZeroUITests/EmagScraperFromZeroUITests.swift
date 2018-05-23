@@ -11,6 +11,7 @@ import XCTest
 class EmagScraperFromZeroUITests: XCTestCase {
     
     private var application: XCUIApplication?
+    private var minCount = 30
     
     override func setUp() {
         super.setUp()
@@ -21,6 +22,8 @@ class EmagScraperFromZeroUITests: XCTestCase {
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         application = XCUIApplication()
         application?.launch()
+        
+        minCount = 30
     }
     
     override func tearDown() {
@@ -33,7 +36,7 @@ class EmagScraperFromZeroUITests: XCTestCase {
     func testBtnSearchClicked_withAppleValue() {
         doSearch("apple")
         
-        XCTAssertEqual(application?.tables.cells.count, 36)
+        XCTAssertGreaterThanOrEqual((application?.tables.cells.count)!, minCount)
     }
     
     func testBtnSearchClicked_withWrongValue() {
@@ -46,13 +49,13 @@ class EmagScraperFromZeroUITests: XCTestCase {
     func testTextFieldShouldReturn_withLenovoValue() {
         doSearch("lenovo", tapOnButton: false)
         
-        XCTAssertEqual(application?.tables.cells.count, 36)
+        XCTAssertGreaterThanOrEqual((application?.tables.cells.count)!, minCount)
     }
     
     func testGetDetails_foriPhoneX() {
         doSearch("apple")
         
-        XCTAssertEqual(application?.tables.cells.count, 36)
+        XCTAssertGreaterThanOrEqual((application?.tables.cells.count)!, minCount)
         
         application?.tables/*@START_MENU_TOKEN@*/.staticTexts["Telefon mobil Apple iPhone X, 64GB, 4G, Space Grey"]/*[[".cells.staticTexts[\"Telefon mobil Apple iPhone X, 64GB, 4G, Space Grey\"]",".staticTexts[\"Telefon mobil Apple iPhone X, 64GB, 4G, Space Grey\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
@@ -62,7 +65,7 @@ class EmagScraperFromZeroUITests: XCTestCase {
     func testPreviewImage_forIPhone7() {
         doSearch("apple")
         
-        XCTAssertEqual(application?.tables.cells.count, 36)
+        XCTAssertGreaterThanOrEqual((application?.tables.cells.count)!, minCount)
         
         swipeUpAndTapOnIPhone7()
         
@@ -73,7 +76,7 @@ class EmagScraperFromZeroUITests: XCTestCase {
     func testPreviewImageFromDetailsAndTable_forIPhone7() {
         doSearch("apple")
         
-        XCTAssertEqual(application?.tables.cells.count, 36)
+        XCTAssertGreaterThanOrEqual((application?.tables.cells.count)!, minCount)
         
         application?.tables/*@START_MENU_TOKEN@*/.staticTexts["Telefon mobil Apple iPhone 7, 32GB, Black"]/*[[".cells[\"Telefon mobil Apple iPhone 7, 32GB, Black, 2799.90, Lei, Label\"].staticTexts[\"Telefon mobil Apple iPhone 7, 32GB, Black\"]",".staticTexts[\"Telefon mobil Apple iPhone 7, 32GB, Black\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
@@ -101,7 +104,7 @@ class EmagScraperFromZeroUITests: XCTestCase {
     func testPreviewImageFromDetails_forIPhone7() {
         doSearch("apple")
         
-        XCTAssertEqual(application?.tables.cells.count, 36)
+        XCTAssertGreaterThanOrEqual((application?.tables.cells.count)!, minCount)
         
         application?.tables/*@START_MENU_TOKEN@*/.staticTexts["Telefon mobil Apple iPhone 7, 32GB, Black"]/*[[".cells[\"Telefon mobil Apple iPhone 7, 32GB, Black, 2799.90, Lei, Label\"].staticTexts[\"Telefon mobil Apple iPhone 7, 32GB, Black\"]",".staticTexts[\"Telefon mobil Apple iPhone 7, 32GB, Black\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
 
@@ -122,7 +125,7 @@ class EmagScraperFromZeroUITests: XCTestCase {
     func testPreviewImageAndSwipeLeft10Times_forIPhone7() {
         doSearch("apple")
         
-        XCTAssertEqual(application?.tables.cells.count, 36)
+        XCTAssertGreaterThanOrEqual((application?.tables.cells.count)!, minCount)
         
         swipeUpAndTapOnIPhone7()
         
@@ -134,7 +137,7 @@ class EmagScraperFromZeroUITests: XCTestCase {
     func testPreviewImageAndSwipeRight10Times_forIPhone7() {
         doSearch("apple")
         
-        XCTAssertEqual(application?.tables.cells.count, 36)
+        XCTAssertGreaterThanOrEqual((application?.tables.cells.count)!, minCount)
         
         swipeUpAndTapOnIPhone7()
 
