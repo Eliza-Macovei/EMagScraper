@@ -45,41 +45,30 @@ class UIImageViewTests: XCTestCase {
     
     private let invalidValue = "test"
     private let validValue = "https://s12emagst.akamaized.net/products/8892/8891494/images/res_d7d63673fac35dac5f93604c4a7bd059_450x450_5t3l.jpg"
+    private var mockURLSession: MockURLSession?
     
     override func setUp() {
         super.setUp()
         
         uiimageView = UIImageView()
+        mockURLSession = MockURLSession()
     }
     
     override func tearDown() {
         super.tearDown()
         
         uiimageView = nil
-    }
-
-    func testLoadImageUsingUrlString_withImageFromCache() {
-        let expectation = self.expectation(description: Constants.Expectation.getDescription("Get image from cache"))
-        expectation.isInverted = true
-
-        let imageToCache: UIImage = #imageLiteral(resourceName: "noInternet")
-        ImageCache.sharedCache.setObject(imageToCache, forKey: self.validValue as AnyObject)
-
-        uiimageView?.loadImageUsingUrlString(urlString: validValue)
-        
-        self.waitForExpectations(timeout: 3) { error in
-            XCTAssertNotNil(self.uiimageView?.image)
-        }
+        mockURLSession = nil
     }
     
     func testLoadImageUsingUrlString_withInvalidUrl() {
-        uiimageView?.loadImageUsingUrlString(url: URL(string: invalidValue)!)
+        uiimageView?.loadImageUsingUrlString(url: URL(string: invalidValue)!, mockURLSession)
         
         XCTAssertNil(uiimageView?.image)
     }
     
     func testLoadImageUsingUrlString_withInvalidUrlString() {
-        uiimageView?.loadImageUsingUrlString(urlString: invalidValue)
+        uiimageView?.loadImageUsingUrlString(urlString: invalidValue, mockURLSession)
         
         XCTAssertNil(uiimageView?.image)
     }

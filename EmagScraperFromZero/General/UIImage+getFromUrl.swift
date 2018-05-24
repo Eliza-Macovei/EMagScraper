@@ -10,20 +10,20 @@ import Foundation
 import UIKit
 
 extension UIImageView {
-    func loadImageUsingUrlString(urlString: String) {
-        loadImageUsingUrlString(url: URL(string: urlString)!)
+    func loadImageUsingUrlString(urlString: String, _ session: URLSessionProtocol? = URLSession.shared) {
+        loadImageUsingUrlString(url: URL(string: urlString)!, session)
     }    
     
-    func loadImageUsingUrlString(url: URL) {
+    func loadImageUsingUrlString(url: URL, _ session: URLSessionProtocol? = URLSession.shared) {
         
         self.image = nil
         
-        if let imageFromCache = ImageCache.sharedCache.object(forKey: url.absoluteURL as AnyObject) as? UIImage {
-            self.image = imageFromCache
+        if let imageFromCache = ImageCache.sharedCache.object(forKey: url.absoluteURL as AnyObject) {
+            self.image = imageFromCache as? UIImage
             return
         }
         
-        URLSession.shared.dataTask(with: url, completionHandler: {
+        session?.dataTask(with: url, completionHandler: {
             (data, response, error) in
 
             if error != nil {
@@ -36,8 +36,10 @@ extension UIImageView {
 
                 let imageToCache = UIImage(data: data!)
 
-                ImageCache.sharedCache.setObject(imageToCache!, forKey: url.absoluteURL as AnyObject, cost: (data?.count)!)
-
+                if imageToCache != nil {
+                    ImageCache.sharedCache.setObject(imageToCache!, forKey: url.absoluteURL as AnyObject, cost: (data?.count)!)
+                }
+                
                 self?.image = imageToCache
             })
 

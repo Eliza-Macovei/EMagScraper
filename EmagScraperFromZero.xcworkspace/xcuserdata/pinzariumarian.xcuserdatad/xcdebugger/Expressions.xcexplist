@@ -163,6 +163,9 @@
             <PersistentString
                value = "uiimageView.image">
             </PersistentString>
+            <PersistentString
+               value = "ImageCache.sharedCache != nil">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
