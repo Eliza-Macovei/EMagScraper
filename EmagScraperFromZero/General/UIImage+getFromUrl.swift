@@ -9,10 +9,45 @@
 import Foundation
 import UIKit
 
-extension UIImage {
-    static func getFromUrl(_ url: URL, with completion:@escaping (Data?, URLResponse?, Error?) -> () ) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            completion(data, response, error)
-        }.resume()
+extension UIImageView {
+    func loadImageUsingUrlString(urlString: String, _ session: URLSessionProtocol? = URLSession.shared) {
+        loadImageUsingUrlString(url: URL(string: urlString)!, session)
+    }    
+    
+    func loadImageUsingUrlString(url: URL, _ session: URLSessionProtocol? = URLSession.shared) {
+        
+        self.image = nil
+        
+        if let imageFromCache = ImageCache.sharedCache.object(forKey: url.absoluteURL as AnyObject) {
+            self.image = imageFromCache as? UIImage
+            return
+        }
+        
+        session?.dataTask(with: url, completionHandler: {
+            (data, response, error) in
+
+            if error != nil {
+                print(error ?? "")
+
+                return
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now(), execute: { [weak self] in
+
+                let imageToCache = UIImage(data: data!)
+
+                if imageToCache != nil {
+                    ImageCache.sharedCache.setObject(imageToCache!, forKey: url.absoluteURL as AnyObject, cost: (data?.count)!)
+                }
+                
+                self?.image = imageToCache
+            })
+
+        }).resume()
+    }
+    
+    public func setupImageViewForGestureRecognizer(_ tapGestureRecognizer: UITapGestureRecognizer) {
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(tapGestureRecognizer)
     }
 }

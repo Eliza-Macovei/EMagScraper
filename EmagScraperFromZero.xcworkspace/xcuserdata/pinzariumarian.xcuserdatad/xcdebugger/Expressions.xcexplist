@@ -3,29 +3,18 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "GLOBAL">
+         contextName = "closure #2 in EmagItemParserTests.testParse_withoutUrl():EmagItemParserTests.swift">
          <PersistentStrings>
             <PersistentString
-               value = "tapGestureRecognizer.view">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in PageViewController.updateUI():PageViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "ItemTableViewController.prepare(for:sender:):ItemTableViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "EMagDetailsParser.detailsBuilder(_:_:_:_:):EMagDetailsParser.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "rootNode.select(&quot;.delivery-estimate-col-lg&quot;)">
+               value = "arrPreviewItem!">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "PageViewController.generateVC(number:):PageViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "UIImageViewTests.testLoadImageUsingUrlString_withValidUrlString():ExtensionTests.swift">
       </ContextState>
       <ContextState
          contextName = "ItemTableViewController.imageTapped(tapGestureRecognizer:):ItemTableViewController.swift">
@@ -39,27 +28,162 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "UIViewController.imageTapped(tapGestureRecognizer:sender:):Extension+Nav.swift">
+         contextName = "implicit closure #1 in HtmlReaderTests.testCompletionHandler_withData():HtmlReaderTests.swift">
       </ContextState>
       <ContextState
-         contextName = "DetailsViewController.handleTap(gesture:):DetailsViewController.swift">
+         contextName = "closure #1 in HtmlReaderTests.testGetHtml_withValidSearch():HtmlReaderTests.swift">
          <PersistentStrings>
             <PersistentString
-               value = "tapLocation">
-            </PersistentString>
-            <PersistentString
-               value = "coloredSquare.layer.presentation()">
+               value = "self.mockURLSession?.dataTaskLastURL">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DetailsViewController.prepare(for:sender:):DetailsViewController.swift">
+         contextName = "HtmlReaderTests.testCompletionHandler_withData():HtmlReaderTests.swift">
       </ContextState>
       <ContextState
          contextName = "DetailsItem.addThumbnailUrl(stringUrl:):DetailsItem.swift">
          <PersistentStrings>
             <PersistentString
                value = "(stringUrl?.isEmpty)!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ItemTableViewController.prepare(for:sender:):ItemTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in UIImageView.loadImageUsingUrlString(url:):Extension+Nav.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "MyImageCache.sharedCache.countLimit">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "implicit closure #1 in closure #1 in HtmlReaderTests.testGetHtml_withValidSearch():HtmlReaderTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mockURLSession?.dataTaskLastURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in PageViewController.updateUI():PageViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "EMagDetailsParser.detailsBuilder(_:_:_:_:):EMagDetailsParser.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "rootNode.select(&quot;.delivery-estimate-col-lg&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in UIImageViewTests.testLoadImageUsingUrlString_withValidUrlString():ExtensionTests.swift">
+      </ContextState>
+      <ContextState
+         contextName = "EmagScraper.search(_:callbackSearch:):EmagScraper.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DetailsViewController.setValues(_:):DetailsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "HtmlReader.getHtml(url:completion:):Url+getHtml.swift">
+      </ContextState>
+      <ContextState
+         contextName = "EmagScraperFromZeroUITests.testPreviewImageAndSwipe_ofLenovoGame():EmagScraperFromZeroUITests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "image.Image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HtmlReaderTests.testGetHtml_withValidUrl():HtmlReaderTests.swift">
+      </ContextState>
+      <ContextState
+         contextName = "UIViewController.imageTapped(tapGestureRecognizer:sender:):Extension+Nav.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DetailsViewController.handleTap(gesture:):DetailsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "coloredSquare.layer.presentation()">
+            </PersistentString>
+            <PersistentString
+               value = "tapLocation">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HtmlReaderTests.testGetHtml_withInvalidUrl():HtmlReaderTests.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ExtensionUIImage.testDownloadWebData():ExtensionTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "&quot;\(link)&quot;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.application(_:didFinishLaunchingWithOptions:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ProcessInfo.processInfo.environment">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.window.rootViewController">
+            </PersistentString>
+            <PersistentString
+               value = "tapGestureRecognizer.view">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "EmagScraperTests.setUp():EmagScraperTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Bundle.main.path(forResource: &quot;view-source_https___m.emag.ro_telefon-mobil-apple-iphone-6-32gb-space-gray-apple-iphone-6-32gb-space-grey&quot;, ofType: &quot;htm&quot;)">
+            </PersistentString>
+            <PersistentString
+               value = "testBundle.bundlePath">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "UIImageViewTests.testLoadImageUsingUrlString_withImageFromCache():ExtensionTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "uiimageView.image">
+            </PersistentString>
+            <PersistentString
+               value = "ImageCache.sharedCache != nil">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in UIImageViewTests.testLoadImageUsingUrlString_withImageFromCache():ExtensionTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "uiimageView.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "implicit closure #2 in closure #1 in HtmlReaderTests.testGetHtml_withValidSearch():HtmlReaderTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mockURLSession?.dataTaskLastURL">
+            </PersistentString>
+            <PersistentString
+               value = "self">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -72,15 +196,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in closure #1 in UIImageView.loadImageUsingUrlString(url:):Extension+Nav.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "MyImageCache.sharedCache.countLimit">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "DetailsViewController.setValues(_:):DetailsViewController.swift">
+         contextName = "DetailsViewController.prepare(for:sender:):DetailsViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

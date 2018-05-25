@@ -10,16 +10,29 @@ import Foundation
 import SwiftSoup
 
 class EmagItemParser {
+    
+    private var htmlReader: HtmlReaderProtocol!
+    
+    init() {
+        self.htmlReader = HtmlReader()
+    }
+    
+    convenience init(_ htmlReader: HtmlReaderProtocol) {
+        self.init()
+        
+        self.htmlReader = htmlReader
+    }
+    
     func parse(url: URL, completion: @escaping ((_ data: [PreviewItem]) -> Void)) {
         var results = [PreviewItem]()
         
-        HtmlReader().getHtml(url: url, completion: { (fullHtml: String?) in
+        htmlReader.getHtml(url: url, completion: { (fullHtml: String?) in
             
-            if fullHtml != nil {
+            if let html = fullHtml {
                 do {
-                    let doc = try SwiftSoup.parse(fullHtml!)
+                    let doc = try SwiftSoup.parse(html)
                     // ?? what about count and extra items / next page of results ??
-                    let cards = try doc.getElementsByClass("card") // 36 results, aka the first page.
+                    let cards = try doc.select(".card-item") // 36 results, aka the first page.
                     
                     for card in cards {
                         if let preview = self.getFieldsFromCard(card) {
